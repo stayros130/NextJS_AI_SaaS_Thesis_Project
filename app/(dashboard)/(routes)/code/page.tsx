@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Heading from "@/components/myComps/Heading";
 import { Code } from "lucide-react";
 import PromptArea from "@/components/myComps/PromptArea";
-import { ChatCompletionRequestMessage } from "openai";
+// import { ChatCompletionRequestMessage } from "openai";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import * as z from "zod";
@@ -16,7 +16,7 @@ import { toast } from "react-hot-toast";
 
 const CodePage = () => {
   const [messages, setMessages] = useState(
-    [] as ChatCompletionRequestMessage[]
+    [] as any[]
   );
   const router = useRouter();
 
@@ -35,7 +35,7 @@ const CodePage = () => {
     );
     console.log(values);
     try {
-      const userMessage: ChatCompletionRequestMessage = {
+      const userMessage: any = {
         role: "user",
         content: values.prompt,
       };
