@@ -59,4 +59,4 @@ jobs:
           app-name: 'AzureAIThesisProject'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BF7B0A0011E843FAB750D274461A6D8A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E655C808396D4D33BE6A64900B27FA6D }}
