@@ -1,9 +1,10 @@
+import { REPLICATE_API_TOKEN } from "@/ApiKeys";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import Replicate from "replicate";
 
 const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN || "",
+  auth: REPLICATE_API_TOKEN || "",
 });
 
 export async function POST(req: Request) {
