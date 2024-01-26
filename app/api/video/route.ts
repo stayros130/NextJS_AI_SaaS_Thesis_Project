@@ -1,5 +1,5 @@
 import { REPLICATE_API_TOKEN } from "@/ApiKeys";
-import { auth } from "@clerk/nextjs";
+// import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import Replicate from "replicate";
 
@@ -9,14 +9,14 @@ const replicate = new Replicate({
 
 export async function POST(req: Request) {
   try {
-    const { userId } = auth();
+    // const { userId } = auth();
     const body = await req.json();
 
     const { prompt } = body;
 
-    if (!userId) {
-      return new NextResponse("Unauthorized", { status: 401 });
-    }
+    // if (!userId) {
+    //   return new NextResponse("Unauthorized", { status: 401 });
+    // }
 
     if (!prompt) {
       return new NextResponse("Prompt is required!", { status: 400 });

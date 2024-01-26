@@ -1,7 +1,7 @@
 import React from "react";
 
 import MobileSidebar from "./Mobile-sidebar";
-import UserInfo from "./UserInfo";
+// import UserInfo from "./UserInfo";
 
 const Navbar = () => {
   return (
@@ -11,7 +11,7 @@ const Navbar = () => {
       </h2>
       <MobileSidebar />
       <div className="lg:hidden absolute inset-y-0 right-0 shrink">
-        <UserInfo />
+        {/* <UserInfo /> */}
       </div>
     </div>
   );

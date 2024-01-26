@@ -1,5 +1,5 @@
 import { OPENAI_API_KEY } from "@/ApiKeys";
-import { auth } from "@clerk/nextjs";
+// import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 // import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from "openai";
 import OpenAI from "openai";
@@ -22,14 +22,14 @@ const instructionMessage = {
 
 export async function POST(req: Request) {
   try {
-    const { userId } = auth();
+    // const { userId } = auth();
     const body = await req.json();
 
     const { messages } = body;
 
-    if (!userId) {
-      return new NextResponse("Unauthorized", { status: 401 });
-    }
+    // if (!userId) {
+    //   return new NextResponse("Unauthorized", { status: 401 });
+    // }
 
     if (!OPENAI_API_KEY) {
       return new NextResponse("OpenAI API Key not configured", { status: 500 });

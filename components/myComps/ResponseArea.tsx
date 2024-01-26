@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Empty from "./Empty";
 import Loader from "./Loader";
 import { cn } from "@/lib/utils";
-import UserAvatar from "./UserAvatar";
+// import UserAvatar from "./UserAvatar";
 import BotAvatar from "./BotAvatar";
 import ReactMarkdown from "react-markdown";
 import { Card, CardContent, CardFooter } from "../ui/card";
@@ -58,7 +58,7 @@ const ResponseArea = ({
                 key={singleResp.content}
               >
                 <div>
-                  {singleResp.role === "user" ? <UserAvatar /> : <BotAvatar />}
+                  {<BotAvatar />}
                 </div>
                 <div className="overflow-auto">
                   {/* CONVERSATION */}
